@@ -1,6 +1,6 @@
 
-%:- use_module(Extras_21091719_VarasVargas).
-:- module(Option_21091719_VarasVargas).
+%:- use_module('Extras_21091719_VarasVargas.pl').
+:- module(Option_21091719_VarasVargas, [option/6]).
 
 
 /*
