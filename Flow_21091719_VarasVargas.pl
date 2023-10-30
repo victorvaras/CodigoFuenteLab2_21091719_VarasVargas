@@ -1,3 +1,4 @@
+:- module(Flow_21091719_VarasVargas, [flow/4, flowAddOption/3]).
 :- use_module('Option_21091719_VarasVargas.pl').
 :- use_module('Extras_21091719_VarasVargas.pl').
 
@@ -21,6 +22,7 @@ flow(Indice, Mensaje, Lista_opcions, Flow_salida):-
 %Caso de crear flujo con options repetidos
 %option(1,"1 - viajar  ",2,4,["viajar","turistear"],O1), option(2,"2 - Estudiar",4,3,["aprender", "perfecionarme"], O2),flow(1,"flujo",[O1,O2,O1,O2,O2],F2).
 
+%option(1,"1 - viajar  ",2,4,["viajar","turistear"],O1), option(2,"2 - Estudiar",4,3,["aprender", "perfecionarme"], O2),flow(1,"flujo",[O1],F2).
 
 flowAddOption([Indice, Mensaje, Options], New_Option, Flow_Salida):-
 
