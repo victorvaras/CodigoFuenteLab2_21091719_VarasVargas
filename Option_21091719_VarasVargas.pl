@@ -2,7 +2,6 @@
 %:- use_module('Extras_21091719_VarasVargas.pl').
 :- module(Option_21091719_VarasVargas, [option/6]).
 
-
 /*
 Estructura funcion option
        code    mensaje  chatbot  flujo     palabras claves                    option_salida
