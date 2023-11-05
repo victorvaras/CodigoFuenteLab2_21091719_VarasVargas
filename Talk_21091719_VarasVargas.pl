@@ -32,6 +32,19 @@ obtener_ListFlows([_, _, _, _, List_Flows], List_Flows).
 obtener_ListOptions([_, _, List_Options], List_Options).
 
 
+%Caso inicial del bot
+talk([],_,ChatBots,InicialChatbot,[InicialChatbot, StartFlowId]):-
+    buscar_ChatBot(ChatBots, InicialChatbot, ChatBot_Actual),
+    obtener_StartFlowId(ChatBot_Actual,StartFlowId).
+
+talk([N_Bot, N_flujo], Eleccion, ChatBots, _, [N_Bot_Nuevo, N_Flujo_Nuevo]):-
+
+    buscar_ChatBot(ChatBots, N_Bot, ChatBot_Actual),
+    obtener_ListFlows(ChatBot_Actual,List_Flows),
+    buscar_Flujo(List_Flows, N_flujo, Flujo_Actual), %error
+    obtener_ListOptions(Flujo_Actual,List_Options),
+    buscar_Option(List_Options, Eleccion, Option_Elegido),
+    obtener_DatosOptions(Option_Elegido, N_Bot_Nuevo, N_Flujo_Nuevo).
 
     
 
