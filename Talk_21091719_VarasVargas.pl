@@ -41,7 +41,7 @@ talk([N_Bot, N_flujo], Eleccion, ChatBots, _, [N_Bot_Nuevo, N_Flujo_Nuevo]):-
 
     buscar_ChatBot(ChatBots, N_Bot, ChatBot_Actual),
     obtener_ListFlows(ChatBot_Actual,List_Flows),
-    buscar_Flujo(List_Flows, N_flujo, Flujo_Actual), %error
+    buscar_Flujo(List_Flows, N_flujo, Flujo_Actual),
     obtener_ListOptions(Flujo_Actual,List_Options),
     buscar_Option(List_Options, Eleccion, Option_Elegido),
     obtener_DatosOptions(Option_Elegido, N_Bot_Nuevo, N_Flujo_Nuevo).
