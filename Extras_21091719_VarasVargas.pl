@@ -18,12 +18,6 @@ remover_id_duplicados([Sub_lista|Resto], Salida) :-
     Salida = [Sub_lista|Res_aux],
     remover_id_duplicados(Resto, Res_aux).
 
-%Predicado que no debe ser contado para que la funcion de False.
-%remover_id_duplicados([Sub_lista|Resto], Salida) :-
-%    [Primer_elemento|_] = Sub_lista,
- %   esta_ID([Primer_elemento|_], Resto),
-  %  remover_id_duplicados(Resto, Salida).
-
 
 remove(List,Res):-    
-    remover_id_duplicados(List,Res).
+    remover_id_duplicados(List,Res). 
