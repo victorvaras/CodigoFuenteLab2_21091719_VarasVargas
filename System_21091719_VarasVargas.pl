@@ -9,13 +9,13 @@ constructor_system(Nombre, InicialChatbot, ChatBots, TDA_User,TDA_Talk,[Nombre, 
 
 system(Nombre, InicialChatbot, ChatBots, System):-
 
-    once(remove(ChatBots, ChatBot_Salida)),
+    once(remover_id_duplicados(ChatBots, ChatBot_Salida)),
     constructor_system(Nombre, InicialChatbot, ChatBot_Salida, [], [],System).
 
 
 systemAddChatbot([Nombre, InicialChatbot, ChatBots, TDA_User, TDA_Talk], New_Chatbot, System):-
 
     append(ChatBots, [New_Chatbot], ChatBot_Aux),
-    once(remove(ChatBot_Aux, ChatBot_Salida)),
+    once(remover_id_duplicados(ChatBot_Aux, ChatBot_Salida)),
     constructor_system(Nombre, InicialChatbot, ChatBot_Salida, TDA_User,TDA_Talk,System).
 

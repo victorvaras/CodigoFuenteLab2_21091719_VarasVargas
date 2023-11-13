@@ -13,11 +13,11 @@ constructor_flow(Indice, Mensaje, Options, [Indice, Mensaje, Options]).
 
 flow(Indice, Mensaje, Lista_opcions, Flow_salida):-
 
-    once(remove(Lista_opcions,Options)),
+    once(remover_id_duplicados(Lista_opcions,Options)),
     constructor_flow(Indice, Mensaje, Options,Flow_salida).
 
 flowAddOption([Indice, Mensaje, Options], New_Option, Flow_Salida):-
 
     append(Options, [New_Option], Options_Aux),
-    once(remove(Options_Aux,Options_Sal)),
+    once(remover_id_duplicados(Options_Aux,Options_Sal)),
     constructor_flow(Indice, Mensaje, Options_Sal,Flow_Salida).
