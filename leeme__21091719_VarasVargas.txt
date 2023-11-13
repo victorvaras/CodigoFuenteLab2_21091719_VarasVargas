@@ -1,0 +1,16 @@
+Instructiones generales
+
+-   Al momento de realizar los llamados tener en concideracion el siguiente comando con la finalidad
+    de poder observar el programa de la manera correcta en swi-prolog:
+    set_prolog_flag(answer_write_options,[max_depth(0)]).
+
+-   El programa para que funcione correctamente debe ejecutarse solo en archivo
+        - "talk_21091719_VarasVargas.pl"
+
+-   Tener en concideracion que el sisteme cuando se utiliza la funcion "systemTalkRec", debe ser llamada
+    con cualquier elemento para poder ser llamado al bot inicial, en el script se encuentra representado
+    por un "hola".
+
+-   Al utilizar la funcion "systemSimulate" se debe conciderar que la seed ingresada, debe generar un valor
+    que contenga numeros validos para la simulacion dentro del system, ademas debe la cota superior corresponder
+    efectivamente al termino. En cualquier otro caso al ejecutarse retornara false.
